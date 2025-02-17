@@ -55,7 +55,11 @@ This repository provides a **Zsh** script to run an npm (Node.js) command and ca
 
 The script reads `.env` for `COMMAND` (the npm/Node command to run), `LOGFILE_PATH` (where JSON logs are written), and `PROJECT_PATH` (the directory of your Node.js project). It logs a **startup** event, then pipes all command output line by line, writes them as **JSON** in `LOGFILE_PATH`, and logs a **shutdown** event when you press <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
-### Viewing Logs
+Here's your updated README section:
+
+---
+
+### **Viewing Logs**
 
 ```zsh
 source .env
@@ -64,11 +68,20 @@ tail -f $LOGFILE_PATH
 
 - Each output line appears as a **single JSON object** (line-oriented JSON).
 - For example:
+
   ```json
   {"time":"2025-02-16T15:57:03-0500","event":"startup"}
   {"time":"2025-02-16T15:57:03-0500","event":"log","level":"INFO","message":"Starting the development server..."}
   {"time":"2025-02-16T15:57:03-0500","event":"shutdown"}
   ```
+
+### **Alternative Log Viewing: Scalyr / Dataset / SDL**
+
+If you prefer a centralized approach, logs can also be viewed in **Scalyr, Dataset, or SentinelOne Data Lake** using the **S1 Collector**.
+
+- Clone **[`scalyr-mac-docker-json`](https://github.com/anitguru/scalyr-mac-docker-json)** to configure the collector.
+- This requires a **SentinelOne Data Lake license** ([info](https://www.sentinelone.com/platform/data-lake/)).
+- Alternatively, you can try **Dataset's free trial** ([sign up](https://www.dataset.com/try-dataset/)).
 
 ## How It Works
 
