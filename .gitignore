@@ -1,0 +1,26 @@
+# Ignore node_modules and lockfiles
+node_modules/
+npm-debug.log
+package-lock.json
+yarn.lock
+
+# Build/Dist/Caches (common for many JS projects)
+dist/
+build/
+.cache/
+
+# Environment Files
+.env
+.env.*     # e.g., .env.development, .env.production
+!.env.example  # Keep your example env file in Git
+
+# Log directories and files
+log/
+logs/
+*.log
+
+# OS or Editor-specific
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
