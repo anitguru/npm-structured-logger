@@ -83,6 +83,8 @@ If you prefer a centralized approach, logs can also be viewed in **Scalyr, Datas
 - This requires a **SentinelOne Data Lake license** ([info](https://www.sentinelone.com/platform/data-lake/)).
 - Alternatively, you can try **Dataset's free trial** ([sign up](https://www.dataset.com/try-dataset/)).
 
+![Dataset](dataset-github.png)
+
 ## How It Works
 
 - **Startup/Shutdown Events**: The script logs startup and shutdown events.
